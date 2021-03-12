@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-const score = 0;
-const aWidth;
-const aHeight;
-const timer;
-const iterations;
+let score = 0;
+let aWidth;
+let aHeight;
+let timer;
+let iterations;
 
 window.addEventListener("load", setGameAreaBounds);
 
@@ -15,7 +15,9 @@ function setGameAreaBounds() {
   aWidth -= 97;
   document.getElementById("gameArea").style.width = aWidth + "px";
   document.getElementById("gameArea").style.height = aHeight + "px";
-  document.getElementById("dot").addEventListener("click", detectHit);
+  aWidth -= 74;
+  aHeight -= 74;
+  moveDot();
 }
 
 function detectHit() {
@@ -23,6 +25,8 @@ function detectHit() {
   document.getElementById("scoreLabel").innerHTML = "Score: " + score;
 
 }
+
+document.getElementById("dot").addEventListener("click", detectHit);
 
 
 
