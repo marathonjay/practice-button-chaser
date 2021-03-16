@@ -12,7 +12,7 @@ function setGameAreaBounds() {
   aWidth = innerWidth;
   aHeight = innerHeight;
   aWidth -= 22;
-  aWidth -= 97;
+  aHeight -= 97;
   document.getElementById("gameArea").style.width = aWidth + "px";
   document.getElementById("gameArea").style.height = aHeight + "px";
   document.getElementById("dot").addEventListener("click", detectHit);
